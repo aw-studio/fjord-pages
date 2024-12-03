@@ -115,7 +115,8 @@ abstract class PagesConfig extends CrudConfig
     protected function makeTitleColumns($table)
     {
         $table->col('Title')
-            ->value('{'.$this->getTitleColumnName().'}');
+            ->value('{'.$this->getTitleColumnName().'}')
+            ->sortBy($this->getTitleColumnName());
     }
 
     /**
