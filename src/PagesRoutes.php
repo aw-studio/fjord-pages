@@ -96,7 +96,7 @@ class PagesRoutes
      */
     protected function routePrefix(string $prefix, string $locale = null)
     {
-        if (! $locale) {
+        if (! $locale || $locale == config('translatable.fallback_locale')) {
             return $prefix;
         }
 
